@@ -1,0 +1,1 @@
+/home/philipp/git/scalableKubernetesEvidence/server/build/classes/kotlin/main/ch/phildev/evidence/k8/ScalableKubernetesApplication.class:/home/philipp/git/scalableKubernetesEvidence/server/build/classes/kotlin/main/ch/phildev/evidence/k8/ScalableKubernetesApplicationKt.class
