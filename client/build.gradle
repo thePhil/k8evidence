@@ -1,6 +1,19 @@
 // mainClassName = ""
 version = "0.0.1"
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-snapshot'
+    }
+}
 
 dependencies {
+    implementation "org.springframework.shell:spring-shell-starter:${spring_shell_version}"
+}
 
+
+compileKotlin {
+    kotlinOptions {
+        freeCompilerArgs = ['-Xjsr305=strict']
+        jvmTarget = '1.8'
+    }
 }
