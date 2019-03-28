@@ -12,3 +12,15 @@ dependencies {
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
     testImplementation 'org.springframework.security:spring-security-test'
 }
+
+jib {
+    to{
+        image = "gcr.io/k8-evidence/phildev-k8evidence-${project.name}:${version}"
+        credHelper = "gcr"
+    }
+    container {
+        mainClass = "ch.phildev.evidence.k8.server.ScalableKubernetesServerApplicationKt"
+        jvmFlags=["-noverify","-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap"]
+        ports = ['8080']
+    }
+}
